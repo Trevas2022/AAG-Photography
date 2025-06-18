@@ -1,0 +1,109 @@
+body {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: hsla(0, 0%, 20%, 0.562);
+  color: #ffffff;
+}
+header {
+  background: #111;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+nav a {
+  margin: 0 1rem;
+  color: #00bcd4;
+  text-decoration: none;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: center;
+}
+.photo-card {
+  background: #2e2e2e;
+  border: 1px solid #444;
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+button {
+  background-color: #00bcd4;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+:root {
+  --bg-color: #1e1e1e;
+  --text-color: #ffffff;
+  --card-bg: #2e2e2e;
+  --accent-color: #00bcd4;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #111;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.photo-card {
+  background: var(--card-bg);
+  border: 1px solid #444;
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+button {
+  background-color: var(--accent-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+}

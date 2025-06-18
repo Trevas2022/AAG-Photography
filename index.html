@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AAG Photography</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {
+        background-color: #575757;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      nav a,
+      .dropdown {
+        margin: 0 1rem;
+        color: #00bcd4;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>AAG Photography</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <span style="cursor: pointer">More</span>
+          <div class="dropdown-content">
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <button id="theme-toggle" style="float: right; margin: 0.5rem">
+          Toggle Theme
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="gallery">
+        <h2>Prints for Sale</h2>
+        <div class="gallery">
+          <div class="photo-card">
+            <img src="./assets/AAG_Photo.JPG" alt="Landscape" />
+            <p>Sunset Landscape</p>
+            <p>$50</p>
+            <button onclick="addToCart('Sunset Landscape', 50)">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total">0</span></p>
+        <button onclick="checkout()">Checkout</button>
+      </section>
+
+      <section id="payment">
+        <h2>Payment Options</h2>
+        <p>Scan this QR code to pay via Cash App:</p>
+        <img src="./assets/CashAppQRCode.jpg" alt="Cash App QR Code" width="150" />
+        <p>Cash App: <strong>$Gosney87</strong></p>
+        <p>Zelle: <strong>727-543-0570</strong></p>
+      </section>
+      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+      <script>
+        emailjs.init("YOUR_USER_ID");
+
+        function sendEmail(cartItems, total) {
+          const templateParams = {
+            message: `Cart: ${JSON.stringify(cartItems)}\nTotal: $${total}`,
+            buyer_email: "buyer@example.com",
+          };
+
+          emailjs
+            .send("your_service_id", "your_template_id", templateParams)
+            .then(() => alert("Email sent to seller!"))
+            .catch((error) => console.error("Email error:", error));
+        }
+      </script>
+    </main>
+
+    <footer>
+      <section id="contact">
+        <p>Contact: Agosney87@gmail.com</p>
+      </section>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
