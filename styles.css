@@ -35,6 +35,14 @@ img {
   width: 100%;
   height: auto;
 }
+
+.qr-small {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* optional: center it */
+}
+
 button {
   background-color: #00bcd4;
   border: none;
@@ -83,6 +91,53 @@ nav a {
   padding: 2rem;
   justify-content: center;
 }
+
+/* Lightbox styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  animation: zoom 0.3s ease;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.5);}
+  to {transform: scale(1);}
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.photo-card img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.photo-card img:hover {
+  transform: scale(1.02);
+}
+
 
 .photo-card {
   background: var(--card-bg);

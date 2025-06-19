@@ -52,9 +52,6 @@
             <a href="contact.html">Contact</a>
           </div>
         </div>
-        <button id="theme-toggle" style="float: right; margin: 0.5rem">
-          Toggle Theme
-        </button>
       </nav>
     </header>
 
@@ -63,8 +60,36 @@
         <h2>Prints for Sale</h2>
         <div class="gallery">
           <div class="photo-card">
-            <img src="./assets/AAG_Photo.JPG" alt="Landscape" />
-            <p>Sunset Landscape</p>
+            <img
+              src="./assets/AAG_Photo.JPG"
+              alt="Photo Sample"
+              onclick="openModal(this)"
+            />
+            <p>Sunset Florida Landscape</p>
+            <p>$50</p>
+            <button onclick="addToCart('Sunset Landscape', 50)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="photo-card">
+            <img
+              src="./assets/AAG_Photo.JPG"
+              alt="Photo Sample"
+              onclick="openModal(this)"
+            />
+            <p>Sunset Florida Landscape</p>
+            <p>$50</p>
+            <button onclick="addToCart('Sunset Landscape', 50)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="photo-card">
+            <img
+              src="./assets/AAG_Photo.JPG"
+              alt="Photo Sample"
+              onclick="openModal(this)"
+            />
+            <p>Sunset Florida Landscape</p>
             <p>$50</p>
             <button onclick="addToCart('Sunset Landscape', 50)">
               Add to Cart
@@ -78,12 +103,41 @@
         <ul id="cart-items"></ul>
         <p>Total: $<span id="total">0</span></p>
         <button onclick="checkout()">Checkout</button>
+        <!-- Lightbox Modal -->
+        <div id="lightboxModal" class="lightbox">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img class="lightbox-content" id="modalImage" />
+        </div>
+        <script>
+          function openModal(imgElement) {
+            const modal = document.getElementById("lightboxModal");
+            const modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = imgElement.src;
+          }
+
+          function closeModal() {
+            document.getElementById("lightboxModal").style.display = "none";
+          }
+
+          // Optional: Close modal on outside click
+          window.onclick = function (event) {
+            const modal = document.getElementById("lightboxModal");
+            if (event.target === modal) {
+              modal.style.display = "none";
+            }
+          };
+        </script>
       </section>
 
       <section id="payment">
         <h2>Payment Options</h2>
         <p>Scan this QR code to pay via Cash App:</p>
-        <img src="./assets/CashAppQRCode.jpg" alt="Cash App QR Code" width="150" />
+        <img
+          src="./assets/CashAppQRCode.jpg"
+          alt="Cash App QR Code"
+          class="qr-small"
+        />
         <p>Cash App: <strong>$Gosney87</strong></p>
         <p>Zelle: <strong>727-543-0570</strong></p>
       </section>
