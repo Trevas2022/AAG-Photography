@@ -5,6 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Services - Jane Doe Photography</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+section {
+  text-align: center;
+  max-width: 800px;
+}
+
+.photo-card {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.photo-card img {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+</style>
   </head>
   <body>
     <header>
@@ -19,9 +44,21 @@
         <h2>What I Offer</h2>
         <ul>
           <li>Event Photography - $200/hr</li>
+                  <div class="photo-card">
+          <img src="./assets/AAG_Photo.JPG" alt="Event Picture" />
+        </div>
           <li>Portrait Sessions - $150</li>
+                  <div class="photo-card">
+          <img src="./assets/AAG_Photo.JPG" alt="Portrait Picture" />
+        </div>
           <li>Print Sales - starting at $50</li>
+                  <div class="photo-card">
+          <img src="./assets/AAG_Photo.JPG" alt="Printed Picture" />
+        </div>
           <li>Car Shoot Sessions -$100</li>
+                  <div class="photo-card">
+          <img src="./assets/AAG_Photo.JPG" alt="Car Shoot Picture" />
+        </div>
         </ul>
       </section>
     </main>

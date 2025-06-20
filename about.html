@@ -5,6 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - AAG Photography</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+      }
+
+      section {
+        text-align: center;
+        max-width: 800px;
+      }
+
+      .photo-card {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .photo-card img {
+        width: 200px;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      .about-table {
+  margin: 1.5rem auto;
+  border: 2px solid #00bcd4;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 800px;
+}
+
+.about-table td {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.about-table:hover {
+  border-color: #0097a7;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
   </head>
   <body>
     <header>
@@ -20,21 +66,28 @@
         <div class="photo-card">
           <img src="./assets/Ash.JPG" alt="Profile Picture" />
         </div>
-        <p>
-          With over a decade of experience behind the lens, Ashley is a seasoned
-          visual storyteller known for capturing powerful moments with precision
-          and passion. Specializing in automotive, fashion, events, and
-          competitive billiards photography, his portfolio reflects a dynamic
-          range and a deep understanding of motion, mood, and detail. From
-          high-octane car shoots to elegant model portraits, lively events to
-          intense national billiard matches, Ashley brings a unique eye and
-          technical mastery to every shot. His work is not just about taking
-          pictures—it's about preserving emotion, energy, and artistry in every
-          frame. Whether it's on the road, in the studio, or at the heart of the
-          action, he delivers compelling imagery that speaks louder than words.
-          Trusted by clients and respected within his industry, Ashley continues
-          to push creative boundaries, one frame at a time.
-        </p>
+        <table class="about-table">
+  <tr>
+    <td>
+      <p>
+        With over a decade of experience behind the lens, Ashley is a seasoned
+        visual storyteller known for capturing powerful moments with precision
+        and passion. Specializing in automotive, fashion, events, and
+        competitive billiards photography, his portfolio reflects a dynamic
+        range and a deep understanding of motion, mood, and detail. From
+        high-octane car shoots to elegant model portraits, lively events to
+        intense national billiard matches, Ashley brings a unique eye and
+        technical mastery to every shot. His work is not just about taking
+        pictures—it's about preserving emotion, energy, and artistry in every
+        frame. Whether it's on the road, in the studio, or at the heart of the
+        action, he delivers compelling imagery that speaks louder than words.
+        Trusted by clients and respected within his industry, Ashley continues
+        to push creative boundaries, one frame at a time.
+      </p>
+    </td>
+  </tr>
+</table>
+
       </section>
     </main>
     <footer><p>&copy; 2025 AAG Photography</p></footer>

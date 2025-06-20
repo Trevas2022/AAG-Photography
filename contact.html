@@ -5,6 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - AAG Photography</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .contact-table {
+  margin: 2rem auto;
+  border-collapse: collapse;
+  border: 2px solid #00bcd4;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(3, 242, 234, 0.948);
+  font-size: 1rem;
+}
+
+.contact-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.contact-table tr:last-child td {
+  border-bottom: none;
+}
+
+.contact-table td:first-child {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.contact-table a {
+  color: #00bcd4;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-table a:hover {
+  color: #0097a7;
+  text-decoration: underline;
+}
+
+    </style>
   </head>
   <body>
     <header>
@@ -18,11 +58,29 @@
     <main>
       <section>
         <h2>Get in Touch</h2>
-        <p>Email: Agosney87@gmail.com</p>
-        <p>Phone: 727-543-0570</p>
-        <p>Instagram: @AAGphotography</p>
+        <table class="contact-table">
+          <tr>
+            <td>📧 <strong>Email:</strong></td>
+            <td>
+              <a href="mailto:Agosney87@gmail.com">Agosney87@gmail.com</a>
+            </td>
+          </tr>
+          <tr>
+            <td>📞 <strong>Phone:</strong></td>
+            <td><a href="tel:7275430570">727-543-0570</a></td>
+          </tr>
+          <tr>
+            <td>📷 <strong>Instagram:</strong></td>
+            <td>
+              <a href="https://instagram.com/AAGphotography" target="_blank"
+                >@AAGphotography</a
+              >
+            </td>
+          </tr>
+        </table>
       </section>
     </main>
+
     <footer><p>&copy; 2025 AAG Photography</p></footer>
   </body>
 </html>

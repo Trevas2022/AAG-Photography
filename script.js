@@ -11,15 +11,31 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   function updateCart() {
-    const cartList = document.getElementById("cart-items");
-    cartList.innerHTML = "";
-    cart.forEach((entry) => {
-      const li = document.createElement("li");
-      li.textContent = `${entry.item} - $${entry.price}`;
-      cartList.appendChild(li);
-    });
-    document.getElementById("total").textContent = total.toFixed(2);
-  }
+  const cartList = document.getElementById("cart-items");
+  cartList.innerHTML = "";
+
+  cart.forEach((entry, index) => {
+    const li = document.createElement("li");
+    li.textContent = `${entry.item} - $${entry.price.toFixed(2)} `;
+
+    const removeBtn = document.createElement("button");
+    removeBtn.textContent = "Remove";
+    removeBtn.style.marginLeft = "10px";
+    removeBtn.onclick = () => removeFromCart(index);
+
+    li.appendChild(removeBtn);
+    cartList.appendChild(li);
+  });
+
+  document.getElementById("total").textContent = total.toFixed(2);
+}
+
+function removeFromCart(index) {
+  total -= cart[index].price;
+  cart.splice(index, 1); // Remove the item from the array
+  updateCart();
+}
+
 
   window.checkout = function () {
     if (cart.length === 0) {
@@ -57,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     emailjs
-      .send("your_service_id", "your_template_id", templateParams)
+      .send("Agosney87@gmail.com", "Made a Payment for Pictures!", templateParams)
       .then(() => alert("Email sent to seller!"))
       .catch((error) => console.error("Email error:", error));
   };
